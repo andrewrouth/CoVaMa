@@ -910,7 +910,7 @@ def Populate():
                                                 for l in kAAseq[-1]:
                                                         if l != 'X':
                                                                 Coord = int(kAAseq[1])+m
-                                                                if Coord in cfg.AllowedCoords[kAASeq[0]]:
+                                                                if Coord in cfg.AllowedCoords[kAAseq[0]]:
                                                                         kCoords.append((Coord, AAIndex.index(l)))
                                                                 else:
                                                                         pass
@@ -957,7 +957,7 @@ if __name__ == "__main__":
     FusionLibCount = defaultdict(dd2)
 
     ##Extract Sequence Data
-    print( )'Reading in FASTA File...')
+    print('Reading in FASTA File...')
     ReadFasta()
 
     ##Generate dicts of dicts for each type of matrix
@@ -973,7 +973,7 @@ if __name__ == "__main__":
 
     ## Extract data from first SAMFile
     if cfg.SAMIN1:
-        print('Extracting data from SAM file'
+        print('Extracting data from SAM file')
         Extract_Data_fromSAM(cfg.SAMIN1)
     else:
         pass

@@ -1,0 +1,46 @@
+15-01-16
+Generates PileUp Counts from Event List prior to Population of Matrices
+Pileup is pickle-dumped to Pileup.py.pi
+17-01-16
+Only populates matrices if pileup reveals sufficient diversity, as specified with the --Pileup_Fraction in the command line, default is 0.001 (0.1%)
+
+06-2016 
+AA and NT scripts were combined. Default is NT. AA mode run if ORF start and Finish is provided.
+
+07-2016
+Merge Script now takes in data from PileUp.py.pi file in order to fill negative correlations between recombination events present in oncec data, but absent in another merged one. 
+
+07-2016 
+Removed some Output_Direction options as these can be specified in the Output_File option.
+
+07-2016
+Merge Script Merges pileup data (and only pileup data if requested)
+
+07-2016 
+Analysis Script reports LD, R2 and DMax (from which D' can be calculated)
+
+07-2016 
+Added new merge script that clusters similar recombination events, either from a single sample or from multiple
+
+CoVaMa 0.4
+
+07-2017
+
+Allow input SAM to be read from gapped-alignments (e.g. Bowtie2, Hisat2). This reads InDels from CIGAR string and ignores pads. CIGAR strings must be either I, D, N, S, or H in addition to the mapped M. D, N and I are treated as microinsertions/deletions as might have been found using ViReMa. 
+
+Input can be short read illumima or long-read nanopore.
+
+07-2017
+
+Seperate exclusion criteria for uInDels and larger recombination events. Two options now available: uInDel exclusion is number of nucs require either side of InDel, Rec Exclusion is same as before. 
+
+uInDel length now specified in commandline rather than inferred from exclusion criteria. 
+Label uInDels rigourously.
+Remove default dict from pickle file (causes recursion error in large files). Save as dict.
+Rename 'ViReMa' references.
+Can set start and end nucleotides to including in mappings.
+
+TODO:
+Multiple SAM files e.g short and long reads
+Accept BAM files
+Rec only, rec-snv only, snv only.

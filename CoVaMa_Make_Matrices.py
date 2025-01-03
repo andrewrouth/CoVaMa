@@ -26,7 +26,7 @@ print('-------------------------------------------------------------------------
 ##      ----------------------------------------------------------------------------------------
 import time
 start = time.time()
-import cPickle as pickle
+import pickle
 import gzip
 import config as cfg
 import argparse
